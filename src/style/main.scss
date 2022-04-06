@@ -84,7 +84,6 @@ button {
 .container {
   display: flex;
   justify-content: center;
-  padding-top: 150px;
 }
 
 .content {
@@ -97,6 +96,7 @@ button {
   &__img {
     position: fixed;
     height: calc(100vh - 150px);
+    top: 150px;
     width: 50vw;
     object-fit: cover;
   }
@@ -112,7 +112,21 @@ button {
     align-items: center;
     height: calc(100vh - 150px);
     padding-left: calc(50vw + 50px);
-    width: 500px;
+    width: calc(50vw - 200px);
+
+    &__actions {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-right: 15px;
+
+      &--item {
+        font-size: 2em;
+        color: var(--primary);
+        margin: 5px 0;
+      }
+    }
   }
 }
 
